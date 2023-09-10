@@ -5,85 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
       <div class="app">
+        <!--* App navbar-->
         <nav class="app__navbar">
-          <ul>
-            <li>VALG</li>
-            <li>VALG</li>
-            <li>VALG</li>
-            <li>VALG</li>
-            <li>VALG</li>
+          <div class="close-navbar">X</div>
+          <h3 class="navbar__title">O_o</h3>
+          <ul class="navbar__options">
+            <li class="home-btn">Home</li>
+            <li class="reset-btn">Reset</li>
+            <li class="about-btn">About</li>
+            <li class="settings-btn">Settings</li>
+            <li class="github-btn">GitHub</li>
           </ul>
         </nav>
+
+        <!--* App Welcome Screen -->
+        <div class="welcome-window">
+          <h1>Welcome to ToDo app</h1>
+          <div>
+            <h2>Enter your name:</h2>
+            <input class="welcome-window-name" type="text" />
+            <h2>Enter your location</h2>
+            <input class="welcome-window-location" type="text" />
+            <button class="welcome-window-submit">Submit</button>
+          </div>
+        </div>
+
+        <!--* Menu => Reset window-->
+        <div class="reset-btn-window">
+          <h3>Are you sure you want to reset?</h3>
+          <button class="yesno-btn">Yes</button>
+          <button class="yesno-btn">No</button>
+        </div>
+
+        <!--* Menu => About window-->
+        <div class="about-window">
+          <h1>Hei</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos non
+            corporis cupiditate sed, eveniet totam pariatur nostrum praesentium
+            omnis consequuntur.
+          </p>
+          <button class="">Check it</button>
+          <button class="about__close-window-btn">Back to app</button>
+        </div>
+
+        <!--* Menu => Settings window-->
+        <div class="settings-window">
+          <h1>Settings</h1>
+          <div class="settings-name">
+            <h3>Name</h3>
+            <input class="settings-setname-input" type="text" />
+            <button class="settings-setname-btn">Submit</button>
+          </div>
+          <div class="settings-color">
+            <h3>Background colors</h3>
+            <select id="">
+              <option value="">Dark</option>
+              <option value="">Light</option>
+              <option value="">Pastel</option>
+              <option value="">Hacker</option>
+              <option value="">Demon</option>
+            </select>
+          </div>
+          <button class="settings-close-btn">Back</button>
+        </div>
+
+        <!--* HEADER WITH NAVBAR ACCESS BUTTON AND ADD NEW BTN-->
         <div class="app__header">
-          <h1>userInputs ToDo list</h1>
+          <div class="burger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <h1 class="header__title">ToDo List</h1>
           <div class="app__header__add-todos">
-            <button id="app__header__add-todos__button">Add new</button>
+            <button class="app__header__add-todos__button">ADD NEW</button>
           </div>
         </div>
 
-        <div class="app__content">
+        <!--* Main app content-->
+        <div class="app__content__container">
+          <div class="app__content">
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
             <div class="app__content__items">
-                <input type="checkbox">
-                <div class="empty__todo__field"></div>
-                <div class="delete__todo">X</div>
+              <input class="checked" type="checkbox" />
+              <div class="empty__todo__field"></div>
+              <div class="delete__todo">X</div>
             </div>
+          </div>
+          <div class="app-widgets">
+            <div class="app-widgets__weather">
+              <div class="input-location">
+                <input class="input-loc" type="text" />
+                <button class="search-loc">🔍</button>
+              </div>
+              <div class="temp-box">
+                <h2 class="weather-temp"></h2>
+                <p class="weather-desc"></p>
+                <p class="weather-loc"></p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        </div>
-          <div id="app__add-window">
-            <input id="app__add-window__input-todo" type="text" />
-            <button id="app__add-window__button">Add ToDo</button>
-            <h1 id="app__add-window__close-button">X</h1>
-          </div>
+        <!--* ADD NEW TODO WINDOW-->
+        <div class="app__add-window">
+          <input class="app__add-window__input-todo" type="text" />
+          <button class="app__add-window__button">ADD TODO</button>
+          <h1 class="app__add-window__close-button">X</h1>
         </div>
       </div>
     </main>
