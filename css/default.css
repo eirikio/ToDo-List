@@ -49,6 +49,7 @@ html,
   --input-todos-text-completed: var(--text-color);
   --burger-color: #000000;
   --text-shadow: #8cdbfd;
+  --input-fields-login: #2483ff;
   --font: "Work Sans", sans-serif;
 }
 
