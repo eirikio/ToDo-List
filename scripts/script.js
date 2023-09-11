@@ -201,10 +201,12 @@ const displayData = (weather) => {
   weatherLocation.innerHTML = `${welcomeWindowLocationInput.value.toUpperCase()}`;
 };
 
-let themeSelect = document.querySelector("#theme-select");
-let submitBtn = document.querySelector("#submit-btn");
+let themeSelect = document.querySelectorAll("#theme-select");
 
 const setTheme = (theme) => (document.documentElement.className = theme);
-themeSelect.addEventListener("change", function () {
+themeSelect[0].addEventListener("change", function () {
+  setTheme(this.value);
+});
+themeSelect[1].addEventListener("change", function () {
   setTheme(this.value);
 });
