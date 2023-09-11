@@ -20,7 +20,7 @@ openNewTodoBtn.addEventListener("click", openAddNewWindow);
 closeNewTodoBtn.addEventListener("click", openAddNewWindow);
 
 let todoField = document.querySelectorAll(".empty__todo__field");
-let addNewTodoInput = document.querySelector(".app__add-window__input-todo");
+let addNewTodoInput = document.querySelector("#app__add-window__input-todo");
 let addNewTodoBtn = document.querySelector(".app__add-window__button");
 let deleteTodo = document.querySelectorAll(".delete__todo");
 let completeTodo = document.querySelectorAll(".checked");
@@ -36,8 +36,9 @@ const printTodos = () => {
     deleteTodo[i].addEventListener("click", () => {
       todos.pop(i);
       todoField[i].innerHTML = " ";
-      todoField[i].style.background = "white";
-      todoField[i].style.border = "2px solid";
+      // todoField[i].style.background = "white";
+      // todoField[i].style.border = "2px solid";
+      todoField[i].style.color = "var(--input-todos-text)";
       todoField[i].style.textDecoration = "none";
       deleteTodo[i].style.display = "none";
       completeTodo[i].checked = false;
@@ -46,12 +47,14 @@ const printTodos = () => {
     completeTodo[i].addEventListener("click", () => {
       if (completeTodo[i].checked) {
         todoField[i].style.textDecoration = "line-through";
-        todoField[i].style.background = "lightgray";
-        todoField[i].style.border = "2px solid ";
+        todoField[i].style.color = "var(--input-todos-text-completed)";
+        // todoField[i].style.background = "lightgray";
+        // todoField[i].style.border = "2px solid ";
       } else {
         todoField[i].style.textDecoration = "none";
-        todoField[i].style.background = "white";
-        todoField[i].style.border = "2px solid ";
+        todoField[i].style.color = "var(--input-todos-text)";
+        // todoField[i].style.background = "white";
+        // todoField[i].style.border = "2px solid ";
       }
     });
   }
@@ -134,6 +137,7 @@ const resetAll = () => {
   for (let i = 0; i < 10; i++) {
     todoField[i].innerHTML = " ";
     deleteTodo[i].style.display = "none";
+    completeTodo[i].checked = false;
   }
 
   console.log(todos);
@@ -196,3 +200,11 @@ const displayData = (weather) => {
   weatherDesc.innerHTML = `${weather.weather[0].description.toUpperCase()}`;
   weatherLocation.innerHTML = `${welcomeWindowLocationInput.value.toUpperCase()}`;
 };
+
+let themeSelect = document.querySelector("#theme-select");
+let submitBtn = document.querySelector("#submit-btn");
+
+const setTheme = (theme) => (document.documentElement.className = theme);
+themeSelect.addEventListener("change", function () {
+  setTheme(this.value);
+});

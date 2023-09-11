@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/default.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,13 +30,24 @@
 
         <!--* App Welcome Screen -->
         <div class="welcome-window">
-          <h1>Welcome to ToDo app</h1>
-          <div>
-            <h2>Enter your name:</h2>
+          <h1 id="welcome-title">o_O ToDo App</h1>
+          <div class="welcome-window-login">
+            <h2>Enter name:</h2>
             <input class="welcome-window-name" type="text" />
-            <h2>Enter your location</h2>
+            <h2>Enter location:</h2>
             <input class="welcome-window-location" type="text" />
             <button class="welcome-window-submit">Submit</button>
+          </div>
+          <div class="settings-color">
+            <h3>Select theme</h3>
+            <select name="theme-select" id="theme-select">
+              <option value="default">Default</option>
+              <option value="dark">Dark</option>
+              <option value="light">Light</option>
+              <option value="pastel">Pastel</option>
+              <option value="hacker">Hacker</option>
+              <option value="demon">Demon</option>
+            </select>
           </div>
         </div>
 
@@ -68,13 +79,14 @@
             <button class="settings-setname-btn">Submit</button>
           </div>
           <div class="settings-color">
-            <h3>Background colors</h3>
-            <select id="">
-              <option value="">Dark</option>
-              <option value="">Light</option>
-              <option value="">Pastel</option>
-              <option value="">Hacker</option>
-              <option value="">Demon</option>
+            <h3>Select theme</h3>
+            <select name="theme-select" id="theme-select">
+              <option value="default">Default</option>
+              <option value="dark">Dark</option>
+              <option value="light">Light</option>
+              <option value="pastel">Pastel</option>
+              <option value="hacker">Hacker</option>
+              <option value="demon">Demon</option>
             </select>
           </div>
           <button class="settings-close-btn">Back</button>
@@ -159,12 +171,26 @@
                 <p class="weather-loc"></p>
               </div>
             </div>
+            <!-- <div class="app-widgets__jsearch border"> -->
+            <!-- <p>Job type:</p> -->
+            <!-- <input class="jsearch__type" type="text" /> -->
+            <!-- <p>In country:</p> -->
+            <!-- <input class="jsearch__country" type="text" /> -->
+            <!-- <button class="jsearch__submit">Submit</button> -->
+            <!--  -->
+            <!-- </div> -->
           </div>
         </div>
 
         <!--* ADD NEW TODO WINDOW-->
+
         <div class="app__add-window">
-          <input class="app__add-window__input-todo" type="text" />
+          <textarea
+            name="input-todos"
+            id="app__add-window__input-todo"
+            cols="30"
+            rows="10"
+          ></textarea>
           <button class="app__add-window__button">ADD TODO</button>
           <h1 class="app__add-window__close-button">X</h1>
         </div>
