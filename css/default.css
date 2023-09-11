@@ -196,6 +196,7 @@ html,
     font-size: 26px;
     text-align: center;
     border: none;
+    border: 2px solid black;
   }
 
   .welcome-window-login h1,
